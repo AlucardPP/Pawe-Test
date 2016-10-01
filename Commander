@@ -81,20 +81,22 @@ public void createCombo() {
         add(tSearch2);
 
     }
-      public void createtextArea(){
+       public void createtextArea(){
         tArea1=new JTextArea();
-        tArea1.setBounds(10, 100, 250, 350);
-        add(tArea1);
+        JScrollPane scroll1=new JScrollPane(tArea1);
+        scroll1.setBounds(10, 100, 250, 350);
+        add(scroll1);
 
         tArea2=new JTextArea();
-        tArea2.setBounds(350, 100, 250, 350);
-        add(tArea2);
+        JScrollPane scroll2=new JScrollPane(tArea2);
+        scroll2.setBounds(350, 100, 250, 350);
+        add(scroll2);
     }
+    
     public void createButton(){
         button=new JButton("<< >>");
         button.setBounds(270,100,70,30);
         add(button);
-
     }
     
      public void diskLetter(JComboBox combo){
