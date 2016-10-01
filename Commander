@@ -56,14 +56,16 @@ public class Commander extends JFrame implements ActionListener {
 
 
     }
-    public void createCombo(){
-        cOptions1=new JComboBox();
-        cOptions1.setBounds(10,50,50,30);
+public void createCombo() {
+        cOptions1 = new JComboBox();
+        cOptions1.setBounds(10, 50, 50, 30);
         add(cOptions1);
+        diskLetter(cOptions1);
 
-        cOptions2=new JComboBox();
-        cOptions2.setBounds(350,50,50,30);
+        cOptions2 = new JComboBox();
+        cOptions2.setBounds(350, 50, 50, 30);
         add(cOptions2);
+        diskLetter(cOptions2);
 
     }
 
@@ -90,5 +92,14 @@ public class Commander extends JFrame implements ActionListener {
         button.setBounds(270,100,70,30);
         add(button);
 
+    }
+    
+     public void diskLetter(JComboBox combo){
+        File[] paths;
+        FileSystemView fsv = FileSystemView.getFileSystemView();
+        paths = File.listRoots();
+        for (File path : paths) {
+            combo.addItem(path);
+        }
     }
 }
