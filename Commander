@@ -1,0 +1,94 @@
+package Testy.Proby.Commander;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+/**
+ * Created by Alucard on 2016-10-01.
+ */
+public class Commander extends JFrame implements ActionListener {
+    private static final int DEFAULT_WIDTH=650;
+    private static final int DEFAULT_HEIGHT=600;
+    private JMenu menuFile,menuEdit,menuOptons,menuTools,menuWindow,menuHelp;
+    private JMenuBar menuBar;
+    private JMenuItem menuItem;
+    private JComboBox cOptions1,cOptions2;
+    private JTextField tSearch1,tSearch2,tField1,tField2;
+    private JButton button;
+
+    public Commander(){
+        setSize(DEFAULT_WIDTH,DEFAULT_HEIGHT);
+        setLocation(300,300);
+        setLayout(null);
+
+        createMenu();
+        createTextField();
+        createCombo();
+        createButton();
+
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
+
+    public void createMenu(){
+        menuBar=new JMenuBar();
+        menuFile=new JMenu("File");
+        menuEdit=new JMenu("Edit");
+        menuOptons=new JMenu("Options");
+        menuTools=new JMenu("Tools");
+        menuWindow=new JMenu("Window");
+        menuHelp=new JMenu ("Help");
+
+        setJMenuBar(menuBar);
+
+        menuBar.add(menuFile);
+        menuBar.add(menuEdit);
+        menuBar.add(menuOptons);
+        menuBar.add(menuTools);
+        menuBar.add(menuWindow);
+        menuBar.add(menuHelp);
+
+
+
+    }
+    public void createCombo(){
+        cOptions1=new JComboBox();
+        cOptions1.setBounds(10,50,50,30);
+        add(cOptions1);
+
+        cOptions2=new JComboBox();
+        cOptions2.setBounds(350,50,50,30);
+        add(cOptions2);
+
+    }
+
+    public void createTextField(){
+        tSearch1=new JTextField();
+        tSearch1.setBounds(70,50,190,30);
+        add(tSearch1);
+
+        tField1=new JTextField();
+        tField1.setBounds(10,100,250,350);
+        add(tField1);
+
+        tSearch2=new JTextField();
+        tSearch2.setBounds(410,50,190,30);
+        add(tSearch2);
+
+        tField2=new JTextField();
+        tField2.setBounds(350,100,250,350);
+        add(tField2);
+
+    }
+    public void createButton(){
+        button=new JButton("<< >>");
+        button.setBounds(270,100,70,30);
+        add(button);
+
+    }
+}
