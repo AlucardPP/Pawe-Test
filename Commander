@@ -76,17 +76,9 @@ public void createCombo() {
         tSearch1.setBounds(70,50,190,30);
         add(tSearch1);
 
-        tField1=new JTextField();
-        tField1.setBounds(10,100,250,350);
-        add(tField1);
-
         tSearch2=new JTextField();
         tSearch2.setBounds(410,50,190,30);
         add(tSearch2);
-
-        tField2=new JTextField();
-        tField2.setBounds(350,100,250,350);
-        add(tField2);
 
     }
       public void createtextArea(){
