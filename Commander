@@ -14,7 +14,8 @@ public class Commander extends JFrame implements ActionListener {
     private JMenuBar menuBar;
     private JMenuItem menuItem;
     private JComboBox cOptions1,cOptions2;
-    private JTextField tSearch1,tSearch2,tField1,tField2;
+    private JTextField tSearch1,tSearch2;
+    private JTextArea tArea1,tArea2;
     private JButton button;
 
     public Commander(){
@@ -26,6 +27,7 @@ public class Commander extends JFrame implements ActionListener {
         createTextField();
         createCombo();
         createButton();
+        createtextArea();
 
     }
 
@@ -86,6 +88,15 @@ public void createCombo() {
         tField2.setBounds(350,100,250,350);
         add(tField2);
 
+    }
+      public void createtextArea(){
+        tArea1=new JTextArea();
+        tArea1.setBounds(10, 100, 250, 350);
+        add(tArea1);
+
+        tArea2=new JTextArea();
+        tArea2.setBounds(350, 100, 250, 350);
+        add(tArea2);
     }
     public void createButton(){
         button=new JButton("<< >>");
